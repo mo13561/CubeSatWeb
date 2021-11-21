@@ -1,4 +1,4 @@
-import { Link as LinkR } from 'react-router-dom';
+import { Link as LinkR} from 'react-router-dom';
 import { Link as LinkS} from 'react-scroll';
 import styled from 'styled-components';
 import { injectGlobal } from 'styled-components';
@@ -32,7 +32,7 @@ export const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 
-export const NavLogo = styled(LinkS)`
+export const NavLogo = styled(LinkR)`
   color: white;
   justify-self: flex-start;
   cursor: pointer;

@@ -2,6 +2,8 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages';
+import Bookings from './Pages/Bookings';
+import Landing from './components/Landing';
 
 function App() {
 //  const Header11 = styled.h1`
@@ -19,11 +21,12 @@ function App() {
 //  `;
 
   return (
-    <div className='App'>
-      <Router>
-        <Home />
-      </Router>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="bookings" element={<Bookings />} />
+      </Routes>
+    </Router>
   );
 }
 

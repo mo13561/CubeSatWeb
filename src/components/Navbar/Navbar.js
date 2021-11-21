@@ -17,7 +17,7 @@ const Navbar = ({toggle}) => {
         <>
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to="home">Polaris</NavLogo>
+                    <NavLogo to="/">Polaris</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
@@ -35,7 +35,9 @@ const Navbar = ({toggle}) => {
                             <NavLinks to="contactus">Contact Us</NavLinks>
                         </NavItem>
                     </NavMenu>
+                    <NavBtn>
                     <NavBtnLink to="/bookings">Bookings</NavBtnLink>
+                    </NavBtn>
                 </NavbarContainer>
             </Nav>  
         </>
