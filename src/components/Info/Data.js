@@ -6,7 +6,7 @@ export const dataObject1 = {
     topline: 'ALL THERE IS TO KNOW',
     headline: 'ABOUT',
     headloan: 'POLARIS',
-    description: 'INSERT VERY INTERESTING A PECULIAR THINGS ABOUT CUBESAT THAT MAKE PEOPLE WANT TO START BOOKING',
+    description: 'INSERT VERY INTERESTING AND PECULIAR THINGS ABOUT CUBESAT THAT MAKE PEOPLE WANT TO START BOOKING',
     buttonLabel: 'find out more',
     bottomline: '(hopefully)',
     imgStart: false,
