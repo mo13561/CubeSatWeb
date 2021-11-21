@@ -47,6 +47,7 @@ export const Column2 = styled.div`
     padding: 0 -50px;
     grid-area:  col2;
     padding: -50%;
+    margin-left: 50px;
     position: sticky;
 `;
 
@@ -76,14 +77,17 @@ export const Heading = styled.h1`
     margin-top: 5%;
     font-size: 7rem;
     line-height: 1.1;
+    margin-right: 20px;
     font-weight: 600;
-    white-space: none;
+    white-space: hidden;
+    overflow: nowrap;
     color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
-    font-size: clamp(3.75rem, 0.4071rem + 14.8571vw, 7rem);
+    font-size: clamp(3.75rem, 0.4071rem + 8vw, 7rem);
     /* @media screen and (max-width: 480px) {
         font-size: 3.75rem;
         //font-size: clamp(4.6875rem, -0.4261rem + 22.7273vw, 18.75rem);
     } */
+
 `;
 
 export const Subtitle = styled.p`

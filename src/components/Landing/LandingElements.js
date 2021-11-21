@@ -93,7 +93,7 @@ export const LandingH3 = styled.text`
         white-space: nowrap;
         font-family: 'Roboto Condensed', sans-serif;
     }
-    @media screen and (max-width: 768px) and (min-width: 360px) {
+    @media screen and (max-width: 767px) and (min-width: 360px) {
         color: white;
         font-size: 28px;
         width: auto;
