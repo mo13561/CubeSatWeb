@@ -3,7 +3,7 @@ export const Central = styled.div`
     height: auto;
     width: 100%; 
     margin: 0 auto;
-    overflow-x: hidden;
+    overflow: hidden;
 
     @media screen and (width: 280px) {
         width: 90mm;
