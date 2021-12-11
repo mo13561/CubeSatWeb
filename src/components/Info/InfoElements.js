@@ -5,9 +5,12 @@ export const InfoContainer = styled.div`
     background: ${({lightBg}) => (lightBg ? 'white' : 'black')};
     height: 100vh;
     margin-top: 0px;
+    overflow: hidden;
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
+        height: 100vh;
+        overflow: hidden;
     }
 `;
 
