@@ -16,12 +16,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "env-cmd -f .env.dev react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:dev": "env-cmd -f .env.dev npm run-script build",
-    "build:qa": "env-cmd -f .env.qa npm run-script build",
-    "build:stg": "env-cmd -f .env.stg npm run-script build",
-    "build:prod": "env-cmd -f .env.prod npm run-script build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
