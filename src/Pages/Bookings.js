@@ -1,9 +1,10 @@
 import React from 'react';
+import BookingsSection from '../components/Bookings/Bookings';
 
 const Bookings = () => {
     return (
         <div>
-            <h1>Someone please fill me with a bookings page.</h1>
+            <BookingsSection />
         </div>
     );
 }
