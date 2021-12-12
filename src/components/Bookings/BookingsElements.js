@@ -10,21 +10,36 @@ export const BookingsLogo = styled(LinkR)`
   align-self: top;
   cursor: pointer;
   font-size: 1.5rem;
-  display: flex;
+  display: grid;
   align-items: top;
   margin-left: 24px;
   font-weight: bold;
+  height: auto;
+  width: 300px;
   text-decoration: none;
   cursor: pointer;
   font-family: 'Shippori Antique B1', sans-serif;
   font-size: 5rem;
+  margin-bottom: 80vh;
+  position: fixed;
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+    margin: 0;
+  
+  } 
 `;
 
 export const MainText = styled.h1`
     color: white;
     margin: auto;
     position: relative;
-    padding: 0;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 10vw 0 10vw;
+    @media screen and (max-width: 1024px) {
+    margin-top: 15vh;
+  } 
 `;
 const x = 40;
 const y = 360;
@@ -39,7 +54,7 @@ export const MainBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: top;
-    font-size: 1.125em;
+    font-size: 2em;
     line-height: 1.6;
     color: #333;
     background: #ddd;

@@ -72,9 +72,8 @@ class DatePicker extends React.Component {
 const BookingsSection = () => {
     return (
       <>
-      
-      <MainBox>
       <BookingsLogo to="/">Polaris</BookingsLogo>
+      <MainBox> 
       <MainText>Book polaris now!</MainText>
         <ForumContainer> 
           <NameForm placeholder="Name" />
