@@ -80,7 +80,7 @@ const BookingsSection = () => {
           <EmailForm placeholder="Email" />
           <Box><T1>Proposed date of your booking:</T1><DatePicker /></Box>
           <CommentBox placeholder="Any additional comments about your booking" />
-          <SubmitBox>Submit</SubmitBox>
+          <SubmitBox />
         </ForumContainer>
       </MainBox>
       </>

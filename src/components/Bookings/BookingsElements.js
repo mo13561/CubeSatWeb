@@ -70,9 +70,10 @@ export const MainBox = styled.div`
     justify-content: center;
     align-items: center;
   }
+  @media screen and (width: )
 `;
 
-export const ForumContainer = styled.div`
+export const ForumContainer = styled.form`
   position: flex;
   display: flex;
   margin-top: auto;
@@ -211,7 +212,10 @@ export const CommentBox = styled.textarea`
     resize: none;
 `;
 
-export const SubmitBox = styled.button`
+export const SubmitBox = styled.input.attrs(props => ({
+    type: "submit",
+    size: props.size || "1em",
+}))`
     flex-direction: column;
     display: grid;
     position: sticky;
