@@ -3,7 +3,52 @@ import { Link as LinkR} from 'react-router-dom';
 import { Link as LinkS} from 'react-scroll';
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import "react-dates/lib/css/_datepicker.css";
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import MobileDatePicker from '@mui/lab/MobileDatePicker';
+import Stack from '@mui/material/Stack';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import IconButton from '@mui/material/IconButton';
 
+export const Cont = styled.div`
+  background: linear-gradient(
+      20deg,
+      hsl(${40}, 60%, 65%),
+      hsl(${360}, 64%, 60%)
+      );
+  overflow: hidden;
+  overflow-y: hidden;
+  white-space: hidden;
+`;
+
+export const IButton = styled(IconButton)`
+  position: absolute;
+  right: 50;
+  top: 20;
+  margin-left: 10px;
+`;
+
+export const IBox = styled(Stack)`  
+  direction: column;
+  align-self: center;
+  overflow: hidden;
+  /* width: 400px; */
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  justify-content: space-evenly;
+`;
+
+export const ITextField = styled(TextField)`
+  width: 400px;
+`;
+
+export const IMobileDatePicker = styled(MobileDatePicker)`
+  width: 400px;
+`;
 export const BookingsLogo = styled(LinkR)`
   color: white;
   justify-self: top;
@@ -194,13 +239,17 @@ export const StyledDatePickerWrapper = styled.div`
   }
 `;
 
-export const Box = styled.div`
-    flex-direction: row;
-    align-items: center;
+export const TheBox = styled.div`
+    flex-direction: column;
+    /* align-items: center; */
     display: flex;
-    overflow: flex;
+    overflow: none;
+    white-space: none;
     position: flex;
-    padding-right: 12px;
+    background: transparent;
+    width: 100vw;
+    height: 100vh; 
+    margin-top: -40px;
 `;
  
 export const CommentBox = styled.textarea`
