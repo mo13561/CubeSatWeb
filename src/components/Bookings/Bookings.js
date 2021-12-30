@@ -1,18 +1,43 @@
-import {ForumContainer, MainText, EmailBox, CommentBox, SubmitBox, NameBox, BookingsLogo, T1, MainBox, StyledDatePickerWrapper, TheBox, ITextField, IBox, IMobileDatePicker, IButton, Cont} from "./BookingsElements";
+import {TheBox, ITextField, IBox, IMobileDatePicker, IButton, Cont, SubButton} from "./BookingsElements";
 import React, { useState, makeStyles } from "react";
 import "react-dates/initialize";
 import { Link } from "react-router-dom";
-import { SingleDatePicker } from "react-dates";
-import moment from "moment";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import "react-dates/lib/css/_datepicker.css";
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import MobileDatePicker from '@mui/lab/MobileDatePicker';
-import Stack from '@mui/material/Stack';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
+
+const theme = createTheme({
+  status: {
+    danger: '#e53e3e',
+  },
+  palette: {
+    primary: {
+      main: '#0971f1',
+      darker: '#053e85',
+    },
+    neutral: {
+      main: '#64748B',
+      contrastText: '#fff',
+    },
+    green: {
+      main: '#01665c',
+      contrastText: '#01665c',
+    }
+  },
+ typography: {
+    fontFamily: [
+      'Shippori Antique B1',
+      'sans-serif',
+    ].join(','),
+  },
+});
 
 const BookingsSection = () => {
   const [value, setValue] = React.useState(new Date('2016-08-18T21:11:54'));
@@ -27,6 +52,7 @@ const BookingsSection = () => {
   // });
 
   return (
+    <ThemeProvider theme={theme}>
     <Cont>
     <IButton component={Link} to="/">
       <ArrowBackIosIcon />
@@ -45,6 +71,7 @@ const BookingsSection = () => {
     <IBox
       spacing={4}
     >
+      <Typography variant="h3">booking submissions</Typography>
       <ITextField
         required
         id="filled-required"
@@ -77,10 +104,15 @@ const BookingsSection = () => {
         maxRows={5}
         variant="filled"
       />
+      <Button
+        color="green"
+        variant="outlined"
+      >SUBMIT</Button>
     </IBox>
     </LocalizationProvider>
     </TheBox>
     </Cont>
+    </ThemeProvider>
   );
 }; 
 

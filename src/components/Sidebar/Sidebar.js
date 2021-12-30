@@ -7,7 +7,8 @@ import {
     SidebarLink,
     SidebarRoute,
     SidebarWrapper,
-    SidebarMenu
+    SidebarMenu,
+    SidebarPageLink
 } from './SidebarElements';
 
 const Sidebar = ({isOpen, toggle}) => {
@@ -19,8 +20,8 @@ const Sidebar = ({isOpen, toggle}) => {
         <SidebarWrapper>
           <SidebarMenu>
             <SidebarLink to="about" onClick={toggle}>About Polaris</SidebarLink>
-            <SidebarLink to="data" onClick={toggle}>Data</SidebarLink>
-            <SidebarLink to="graphs" onClick={toggle}>Graphs</SidebarLink>
+            <SidebarPageLink to="data" onClick={toggle}>Data</SidebarPageLink>
+            <SidebarPageLink to="graphs" onClick={toggle}>Graphs</SidebarPageLink>
             <SidebarLink to="contactus" onClick={toggle}>Contact Us</SidebarLink>
           </SidebarMenu>
           <SideBtnWrap>

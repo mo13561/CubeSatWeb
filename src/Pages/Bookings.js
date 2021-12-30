@@ -3,9 +3,7 @@ import BookingsSection from '../components/Bookings/Bookings';
 
 const Bookings = () => {
     return (
-        <div>
-            <BookingsSection />
-        </div>
+        <BookingsSection />
     );
 }
 

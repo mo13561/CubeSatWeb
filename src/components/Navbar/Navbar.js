@@ -7,7 +7,8 @@ import { Nav,
     NavItem, 
     NavLinks,
     NavBtn,
-    NavBtnLink 
+    NavBtnLink,
+    NavPageLinks 
 } from './NavbarElements';
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -39,10 +40,10 @@ const Navbar = ({toggle}) => {
                             <NavLinks to="about">About Polaris</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="data">Data</NavLinks>
+                            <NavPageLinks to="data">Data</NavPageLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="graphs">Graphs</NavLinks>
+                            <NavPageLinks to="graphs">Graphs</NavPageLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="contactus">Contact Us</NavLinks>

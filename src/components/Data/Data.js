@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Cont } from './DataElements';
 
-const Data = () => {
+const DataSection = () => {
     return (
-        <div>
-            <h1>This is a page for tables of data from the cubesat</h1>
-        </div>
+        <Cont>
+            <h1>Data Page wow</h1>
+        </Cont>
     )
 }
 
-export default Data
+export default DataSection;
