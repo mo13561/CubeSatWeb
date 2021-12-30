@@ -28,12 +28,10 @@ export const Cont = styled.div`
   white-space: hidden;
 `;
 
-export const IButton = styled(IconButton)`
-  position: absolute;
-  right: 50;
-  top: 20;
-  margin-left: 10px;
-`;
+export const IButton = s(IconButton)({
+  position: 'relative',
+  margin: 'auto',
+});
 
 export const IBox = styled(Stack)`  
   direction: column;

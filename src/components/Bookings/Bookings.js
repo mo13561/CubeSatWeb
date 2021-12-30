@@ -1,4 +1,4 @@
-import {TheBox, ITextField, IBox, IMobileDatePicker, IButton, Cont, SubButton} from "./BookingsElements";
+import {TheBox, ITextField, IBox, IMobileDatePicker, IButton, Cont} from "./BookingsElements";
 import React, { useState, makeStyles } from "react";
 import "react-dates/initialize";
 import { Link } from "react-router-dom";
@@ -19,8 +19,8 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#0971f1',
-      darker: '#053e85',
+      main: '#01665c',
+      darker: '#01665c',
     },
     neutral: {
       main: '#64748B',
@@ -40,7 +40,7 @@ const theme = createTheme({
 });
 
 const BookingsSection = () => {
-  const [value, setValue] = React.useState(new Date('2016-08-18T21:11:54'));
+  const [value, setValue] = React.useState(new Date('2017-04-05T21:11:54'));
 
   const handleChange = (newValue) => {
     setValue(newValue);
@@ -53,10 +53,11 @@ const BookingsSection = () => {
 
   return (
     <ThemeProvider theme={theme}>
+    
     <Cont>
-    <IButton component={Link} to="/">
-      <ArrowBackIosIcon />
-    </IButton>
+      <IButton component={Link} to="/">
+        <ArrowBackIosIcon />
+      </IButton>
     <TheBox>
     <LocalizationProvider dateAdapter={AdapterDateFns}>
     <Box
