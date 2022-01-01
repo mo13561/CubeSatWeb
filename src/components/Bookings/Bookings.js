@@ -100,11 +100,8 @@ const BookingsSection = () => {
   //  }
   // });
   const handleSubmit = evt => {
-    evt.preventDefault();
-    let data = {
-      formInput
-    }
-    console.log(data);
+    evt.preventDefault(); 
+    console.log(formInput);
     setFormInput({
       name: "",
       email: "",
