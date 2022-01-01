@@ -99,26 +99,12 @@ const BookingsSection = () => {
   //     resize: "both"
   //  }
   // });
-  async function run() {
-    try {
-      await client.connect();
-      const database = client.db("Polaris");
-      const haiku = database.collection("Bookings");
-      // create a document to insert
-      const doc = {formInput};
-      const result = await haiku.insertOne(doc);
-      console.log(`A document was inserted with the _id: ${result.insertedId}`);
-    } finally {
-      await client.close();
-    }
-  }
   const handleSubmit = evt => {
     evt.preventDefault();
     let data = {
       formInput
     }
     console.log(data);
-    run().catch(console.dir);
     setFormInput({
       name: "",
       email: "",
