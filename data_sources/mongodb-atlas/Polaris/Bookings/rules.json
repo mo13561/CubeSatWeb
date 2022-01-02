@@ -13,6 +13,15 @@
             "delete": true,
             "search": true,
             "additional_fields": {}
+        },
+        {
+            "name": "user",
+            "apply_when": {},
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "search": true,
+            "additional_fields": {}
         }
     ]
 }
