@@ -64,7 +64,7 @@ export const LandingH1 = styled.h1`
     }
 `;
 
-export const LandingH3 = styled.text`
+export const LandingH3 = styled.h3`
     color: white;
     font-size: 28px;
     position: absolute;
@@ -72,6 +72,7 @@ export const LandingH3 = styled.text`
     text-align: center;
     padding-top: 0px;
     white-space: wrap;
+    font-weight: normal;
     font-family: 'Roboto Condensed', sans-serif;    
     @media screen and (max-width: 360px) {
         color: white;

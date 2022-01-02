@@ -24,7 +24,7 @@ import * as Realm from "realm-web";
 
 const doSubmit = async formInput => {
   const app = new Realm.App({ id: "cubesatweb-ycdlh" });
-  console.log(formInput);
+  // console.log(formInput);
   // Create an anonymous credential
   const credentials = Realm.Credentials.anonymous();
   // try {
@@ -36,14 +36,14 @@ const doSubmit = async formInput => {
   //   console.error("Failed to log in", err);
   // }
   const user = await app.logIn(credentials);
-  console.log(user);
+  // console.log(user);
   const mongodb = app.currentUser.mongoClient("mongodb-atlas");
-  console.log(mongodb);
+  // console.log(mongodb);
   const bookings = mongodb.db("Polaris").collection("Bookings");
-  console.log(bookings);
+  // console.log(bookings);
   const result = await bookings.insertOne(formInput);
-  console.log(result);
-  console.log(formInput);
+  // console.log(result);
+  // console.log(formInput);
 }
 
 const theme = createTheme({
@@ -166,7 +166,6 @@ const BookingsSection = () => {
         required
         id="filled-required"
         label="Name"
-        defaultValue=""
         variant="filled"
         name="name"
         value={formInput.name}
@@ -176,7 +175,6 @@ const BookingsSection = () => {
         required
         id="filled-required"
         label="Email"
-        defaultValue=""
         variant="filled"
         name="email"
         value={formInput.email}
@@ -196,7 +194,6 @@ const BookingsSection = () => {
         required
         id="filled"
         label="Any other comments"
-        defaultValue=""
         multiline
         resize="both"
         maxRows={5}
