@@ -1,7 +1,7 @@
 # Cubesat website
 
 
-## React frontend with Mongodb database (not separated - just using api queries)
+## React frontend with mongodb database (not separated - just using api queries)
 
 ### Use:
 
