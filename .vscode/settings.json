@@ -1,2 +1,4 @@
 {
+    "appService.defaultWebAppToDeploy": "/subscriptions/031cae6b-7631-42e0-9a1d-cc236e866b32/resourceGroups/polariscubesat-rg/providers/Microsoft.Web/sites/polariscubesat",
+    "appService.deploySubpath": "."
 }
