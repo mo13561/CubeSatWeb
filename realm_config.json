@@ -1,0 +1,7 @@
+{
+    "app_id": "cubesatweb-ycdlh",
+    "config_version": 20210101,
+    "name": "CubeSatWeb",
+    "location": "IE",
+    "deployment_model": "LOCAL"
+}
