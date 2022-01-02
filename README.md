@@ -5,9 +5,9 @@
 
 ### Use:
 
--- Information on the cubesat
+Information on the cubesat
 -- 
--- Graphs and data
+Graphs and data
 --
--- Booking slots to use cubesat
--- 
+Booking slots to use cubesat
+---- 
