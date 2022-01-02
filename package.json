@@ -22,6 +22,7 @@
     "material-ui": "^0.15.0",
     "mongodb": "^4.2.2",
     "nodemon": "^2.0.15",
+    "path": "^0.12.7",
     "react": "^17.0.2",
     "react-awesome-button": "^6.5.1",
     "react-dates": "^21.8.0",
@@ -33,6 +34,7 @@
     "react-scripts": "^5.0.0",
     "react-scroll": "^1.8.4",
     "realm-web": "^1.5.1",
+    "stream": "^0.0.2",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2"
   },

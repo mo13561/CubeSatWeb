@@ -14,15 +14,37 @@ import Typography from '@mui/material/Typography';
 import { useForm, Controller } from "react-hook-form";
 // import { MongoClient } from "mongodb";
 import axios from 'axios';
+import * as Realm from "realm-web";
 
 function validateEmail (email) {
   const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return regexp.test(email);
 }
 
+const app = new Realm.App({ id: "cubesatweb-ycdlh" });
+
 // const url = "https://data.mongodb-api.com/app/data-ocize/endpoint/data/beta/endpoint/data/beta/action/insertOne";
 // const uri = "mongodb+srv://mo13562:1Freetouse@cluster0.lc14s.mongodb.net/Polaris?retryWrites=true&w=majority";
 // const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+const doSubmit = async formInput => {
+  console.log(formInput);
+  // Create an anonymous credential
+  const credentials = Realm.Credentials.anonymous();
+  // try {
+  //   // Authenticate the user
+  //   const user = await app.logIn(credentials);
+  //   return user
+  //   console.log("logged in");
+  // } catch(err) {
+  //   console.error("Failed to log in", err);
+  // }
+  const mongodb = app.currentUser.mongoClient("Cluster0");
+  const bookings = mongodb.db("Polaris").collection("Bookings");
+  const result = await bookings.insertOne(formInput);
+  console.log(result);
+  console.log(formInput);
+}
 
 const theme = createTheme({
   status: {
@@ -99,16 +121,16 @@ const BookingsSection = () => {
   //     resize: "both"
   //  }
   // });
-  const handleSubmit = evt => {
-    evt.preventDefault(); 
-    console.log(formInput);
-    setFormInput({
-      name: "",
-      email: "",
-      date: dateValue,
-      comment: "",
-    });
-  }
+  const handleSubmit = async evt => {
+  evt.preventDefault(); 
+  doSubmit(formInput);
+  setFormInput({
+    name: "",
+    email: "",
+    date: dateValue,
+    comment: "",
+  });
+}
 
   return (
     <ThemeProvider theme={theme}>
