@@ -124,7 +124,7 @@ export const NavBtnLink = styled(LinkR)`
    white-space: nowrap;
    padding: 10px 22px;
    height: 20%;
-   color: white;
+   color: black;
    font-size: 16px;
    outline: none;
    border: none;
@@ -139,8 +139,8 @@ export const NavBtnLink = styled(LinkR)`
 
    &:hover {
      transition: all 0.2s ease-in-out;
-     background: #fff;
-     color: #010606;
+     background: black;
+     color: white;
    }
 
    @media screen and (max-width: 768px) {
