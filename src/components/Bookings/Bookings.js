@@ -21,13 +21,12 @@ function validateEmail (email) {
   return regexp.test(email);
 }
 
-const app = new Realm.App({ id: "cubesatweb-ycdlh" });
-
 // const url = "https://data.mongodb-api.com/app/data-ocize/endpoint/data/beta/endpoint/data/beta/action/insertOne";
 // const uri = "mongodb+srv://mo13562:1Freetouse@cluster0.lc14s.mongodb.net/Polaris?retryWrites=true&w=majority";
 // const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const doSubmit = async formInput => {
+  const app = new Realm.App({ id: "cubesatweb-ycdlh" });
   console.log(formInput);
   // Create an anonymous credential
   const credentials = Realm.Credentials.anonymous();
@@ -39,8 +38,12 @@ const doSubmit = async formInput => {
   // } catch(err) {
   //   console.error("Failed to log in", err);
   // }
-  const mongodb = app.currentUser.mongoClient("Cluster0");
+  const user = await app.logIn(credentials);
+  console.log(user);
+  const mongodb = app.currentUser.mongoClient("mongodb-atlas");
+  console.log(mongodb);
   const bookings = mongodb.db("Polaris").collection("Bookings");
+  console.log(bookings);
   const result = await bookings.insertOne(formInput);
   console.log(result);
   console.log(formInput);
