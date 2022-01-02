@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 import { Link as LinkR} from 'react-router-dom';
-import { Link as LinkS} from 'react-scroll';
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 import TextField from '@mui/material/TextField';
