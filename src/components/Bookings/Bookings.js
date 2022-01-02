@@ -13,10 +13,12 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import * as Realm from "realm-web";
 
-// function validateEmail (email) {
-//   const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//   return regexp.test(email);
-// }
+function validateEmail (email) {
+  const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (email === "") return;
+  validated =  !regexp.test(email);
+}
+let validated = false;
 
 // const url = "https://data.mongodb-api.com/app/data-ocize/endpoint/data/beta/endpoint/data/beta/action/insertOne";
 // const uri = "mongodb+srv://mo13562:1Freetouse@cluster0.lc14s.mongodb.net/Polaris?retryWrites=true&w=majority";
@@ -122,6 +124,7 @@ const BookingsSection = () => {
     }
   );
   const handleChange = evt => {
+    validated = formInput.email === "" ? false : validateEmail(formInput.email);
     const name = evt.target.name;
     const newValue = evt.target.value;
     setFormInput({ [name]: newValue });
@@ -133,6 +136,10 @@ const BookingsSection = () => {
   // });
   const handleSubmit = async evt => {
   evt.preventDefault(); 
+  if (validated === true) {
+    alert("Please enter a valid email");
+    return;
+  }
   doSubmit(formInput);
   setFormInput({
     name: "",
@@ -180,8 +187,11 @@ const BookingsSection = () => {
         variant="filled"
         name="email"
         value={formInput.email}
+        error={validated}
         // value={emailValue}
         onChange={handleChange}
+        onBlur={validateEmail(formInput.email)}
+        helperText={validated ? "Please enter a valid email" : ""}
       />
       <IMobileDatePicker
           label="Projected Usage Date"
