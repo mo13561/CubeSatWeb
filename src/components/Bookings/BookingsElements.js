@@ -45,6 +45,9 @@ export const IBox = styled(Stack)`
 
 export const ITextField = styled(TextField)`
   width: 400px;
+  @media screen and (max-width: 450px) {
+    width: 90vw;
+  }
 `;
 
 export const IMobileDatePicker = styled(MobileDatePicker)`

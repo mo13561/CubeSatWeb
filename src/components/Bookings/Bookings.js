@@ -72,6 +72,14 @@ const theme = createTheme({
   },
 });
 
+theme.typography.h3 = {
+  fontSize: 'clamp(2.1rem, -2.0000rem + 17.0000vw, 3rem)',
+  fontFamily: [
+    'Shippori Antique B1',
+    'sans-serif',
+  ].join(','),
+};
+
 // const defaultValues = {
 //   Native: "",
 //   TextField: "",
@@ -153,7 +161,7 @@ const BookingsSection = () => {
       component="form"
       onSubmit={handleSubmit}
     >
-      <Typography variant="h3">booking submissions</Typography>
+      <Typography variant="h3" sx={{fontWeight: "light", textAlign: "center", m: 1}}>booking submissions</Typography>
       <ITextField
         required
         id="filled-required"
