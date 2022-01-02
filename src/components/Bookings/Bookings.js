@@ -35,13 +35,15 @@ const doSubmit = async formInput => {
   // } catch(err) {
   //   console.error("Failed to log in", err);
   // }
-  const user = await app.logIn(credentials);
+  // const user = 
+  await app.logIn(credentials);
   // console.log(user);
   const mongodb = app.currentUser.mongoClient("mongodb-atlas");
   // console.log(mongodb);
   const bookings = mongodb.db("Polaris").collection("Bookings");
   // console.log(bookings);
-  const result = await bookings.insertOne(formInput);
+  // const result = 
+  await bookings.insertOne(formInput);
   // console.log(result);
   // console.log(formInput);
 }
