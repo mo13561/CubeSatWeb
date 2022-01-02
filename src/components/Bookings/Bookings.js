@@ -1,5 +1,5 @@
 import {TheBox, ITextField, IBox, IMobileDatePicker, IButton, Cont} from "./BookingsElements";
-import React, { useState, makeStyles, useReducer } from "react";
+import React, { useReducer } from "react";
 import "react-dates/initialize";
 import { Link } from "react-router-dom";
 import Box from '@mui/material/Box';
@@ -11,15 +11,12 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import { useForm, Controller } from "react-hook-form";
-// import { MongoClient } from "mongodb";
-import axios from 'axios';
 import * as Realm from "realm-web";
 
-function validateEmail (email) {
-  const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return regexp.test(email);
-}
+// function validateEmail (email) {
+//   const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   return regexp.test(email);
+// }
 
 // const url = "https://data.mongodb-api.com/app/data-ocize/endpoint/data/beta/endpoint/data/beta/action/insertOne";
 // const uri = "mongodb+srv://mo13562:1Freetouse@cluster0.lc14s.mongodb.net/Polaris?retryWrites=true&w=majority";
@@ -75,17 +72,17 @@ const theme = createTheme({
   },
 });
 
-const defaultValues = {
-  Native: "",
-  TextField: "",
-  Select: "",
-  ReactSelect: { value: "vanilla", label: "Vanilla" },
-  Checkbox: false,
-  switch: false,
-  RadioGroup: "",
-  numberFormat: 123456789,
-  downShift: "apple"
-};
+// const defaultValues = {
+//   Native: "",
+//   TextField: "",
+//   Select: "",
+//   ReactSelect: { value: "vanilla", label: "Vanilla" },
+//   Checkbox: false,
+//   switch: false,
+//   RadioGroup: "",
+//   numberFormat: 123456789,
+//   downShift: "apple"
+// };
 
 const BookingsSection = () => {
   const [dateValue, setDateValue] = React.useState(new Date('2017-04-05T21:11:54'));

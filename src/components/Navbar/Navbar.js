@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Nav, 
     NavbarContainer, 
     NavLogo, 
@@ -11,25 +11,12 @@ import { Nav,
     NavPageLinks 
 } from './NavbarElements';
 import { FaBars } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 const Navbar = ({toggle}) => {
-    const [scrollDown, setScrollDown] = useState(false);
-    const onScroll = () => {
-        if (window.scrollY >= 80) {
-            setScrollDown(true);
-        } else {
-            setScrollDown(false);
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', onScroll);
-    }, [])
 
     return (
         <>
-            <Nav scrollNav={onScroll}>
+            <Nav>
                 <NavbarContainer>
                     <NavLogo to="/">Polaris</NavLogo>
                     <MobileIcon onClick={toggle}>
