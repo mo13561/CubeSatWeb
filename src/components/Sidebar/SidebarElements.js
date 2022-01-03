@@ -79,10 +79,10 @@ export const SideBtnWrap = styled.div`
 
 export const SidebarRoute = styled(LinkR)`
     border-radius: 9px;
-    background: purple;
+    background: papayawhip;
     white-space: nowrap;
     padding: 16px 64px;
-    color: white;
+    color: black;
     font-size: 16px;
     outline: none;
     border: none;
@@ -94,8 +94,8 @@ export const SidebarRoute = styled(LinkR)`
 
     &:hover {
         transition: 0.2s ease-in-out;
-        background: white;
-        color: black;
+        background: black;
+        color: white;
     }
 
 `;
