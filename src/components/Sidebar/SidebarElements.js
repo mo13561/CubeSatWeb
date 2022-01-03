@@ -67,7 +67,7 @@ export const SidebarPageLink = styled(LinkR)`
     cursor: pointer;
 
     &:hover {
-        color: yellowgreen;
+        color: papayawhip;
         transition: 0.2s ease-in-out;
     }
 `;
