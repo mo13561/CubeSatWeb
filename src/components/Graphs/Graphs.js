@@ -1,6 +1,8 @@
 import React from 'react';
-import { Cont } from './GraphsElements';
+import { Cont, IButton } from './GraphsElements';
 import { LineChart, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Line, XAxis, YAxis } from 'recharts';
+import { Link } from "react-router-dom";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 const data = [
   {
@@ -72,6 +74,9 @@ const GraphsSection = () => {
     return (
         <>
         <Cont>
+            <IButton component={Link} to="/">
+                <ArrowBackIosIcon />
+            </IButton>
             <h1>Graphs Page wow</h1>
         </Cont>
         <BasicChart />
