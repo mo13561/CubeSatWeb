@@ -23,7 +23,7 @@ export const dataObject2 = {
     topline: '',
     headline: 'CONTACT',
     headloan: 'US',
-    description: '<https://twitter.com/mo13562 />',
+    description: '<polarismail@mailservice.com />',
     buttonLabel: 'find out more',
     bottomline: 'IF YOU HAVE A QUERY',
     imgStart: true,
